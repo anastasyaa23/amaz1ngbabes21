@@ -8,7 +8,7 @@
     <!-- Open Graph Tags (WhatsApp, Facebook, Telegram, Threads) -->
     <meta property="og:title" content="🟢CONTACT ME📲Chat with me by📞👆🏻">
     <meta property="og:description" content="Sharing my unfiltered thoughts and quiet moments. Come say hi.">
-    <meta property="og:image" content="https://raw.githubusercontent.com/anastasyaa23/amaz1ngbabes21/main/BMW.png">
+    <meta property="og:image" content="https://raw.githubusercontent.com/contact-here37/see/refs/heads/main/BMW.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:type" content="website">
@@ -17,46 +17,116 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="🟢CONTACT ME📲Chat with me by📞👆🏻">
     <meta name="twitter:description" content="Sharing my unfiltered thoughts and quiet moments. Come say hi.">
-    <meta name="twitter:image" content="https://raw.githubusercontent.com/anastasyaa23/amaz1ngbabes21/main/BMW.png">
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/contact-here37/see/refs/heads/main/BMW.png">
     
     <style>
         body, html {
-            margin: 0; padding: 0; height: 100%;
+            margin: 0; 
+            padding: 0; 
+            height: 100%;
             font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
             overflow: hidden;
+            background-color: #000;
         }
         .video-background {
-            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            object-fit: cover; z-index: -1;
+            position: fixed; 
+            top: 0; 
+            left: 0; 
+            width: 100%; 
+            height: 100%;
+            object-fit: cover; 
+            z-index: -1;
         }
         .container {
-            position: relative; z-index: 1;
-            display: flex; flex-direction: column;
-            justify-content: center; align-items: center;
-            height: 100vh; color: white;
-            text-align: center; background: rgba(0,0,0,0.5);
+            position: relative; 
+            z-index: 1;
+            display: flex; 
+            flex-direction: column;
+            justify-content: center; 
+            align-items: center;
+            height: 100vh; 
+            color: white;
+            text-align: center; 
+            background: rgba(0,0,0,0.4);
             padding: 20px;
+            box-sizing: border-box;
         }
-        h1 { font-size: 2rem; margin-bottom: 0.5rem; letter-spacing: 1px; }
-        p { font-size: 1.1rem; margin-bottom: 2rem; opacity: 0.9; max-width: 500px; }
+        h1 { 
+            font-size: 2rem; 
+            margin-bottom: 0.5rem; 
+            letter-spacing: 1px; 
+            text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+        }
+        p { 
+            font-size: 1.1rem; 
+            margin-bottom: 2rem; 
+            opacity: 0.9; 
+            max-width: 500px; 
+            text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+        }
         .cta-button {
-            padding: 15px 40px; background-color: #ffffff;
-            color: #000; text-decoration: none;
-            border-radius: 5px; font-weight: 600;
-            font-size: 1.1rem; transition: background 0.3s;
+            padding: 15px 40px; 
+            background-color: #ffffff;
+            color: #000; 
+            text-decoration: none;
+            border-radius: 5px; 
+            font-weight: 600;
+            font-size: 1.1rem; 
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
         }
-        .cta-button:hover { background-color: #eeeeee; }
+        .cta-button:hover { 
+            background-color: #eeeeee; 
+            transform: scale(1.03);
+        }
+        /* Tombol Play/Pause Manual untuk HP */
+        .play-btn {
+            margin-top: 15px;
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            backdrop-filter: blur(5px);
+        }
     </style>
 </head>
 <body>
-    <video autoplay muted loop playsinline class="video-background">
-        <source src="video1.mp4" type="video/mp4">
+
+    <!-- Background Video langsung dari server -->
+    <video id="bgVideo" autoplay muted loop playsinline class="video-background">
+        <source src="https://meet4ndconn3ct-37ml.github.io/join/video1.mp4" type="video/mp4">
     </video>
     
     <div class="container">
         <h1>THE PERSONAL ARCHIVE</h1>
         <p>Beyond the public view, this is where I keep my unfiltered thoughts. A private space for genuine connections.</p>
         <a href="https://blue-sky-75aa96.netlify.app" class="cta-button">STEP INTO MY WORLD</a>
+        
+        <!-- Tombol Kontrol Video jika autoplay terblokir -->
+        <button class="play-btn" onclick="togglePlay()">▶ Play / Pause Video</button>
     </div>
+
+    <script>
+        const video = document.getElementById('bgVideo');
+
+        // Memastikan video otomatis terputar saat halaman dimuat
+        document.addEventListener('DOMContentLoaded', () => {
+            video.play().catch(() => {
+                console.log("Autoplay terblokir oleh browser HP, silakan tekan tombol Play manual.");
+            });
+        });
+
+        // Fungsi Tombol Play / Pause
+        function togglePlay() {
+            if (video.paused) {
+                video.play();
+            } else {
+                video.pause();
+            }
+        }
+    </script>
 </body>
 </html>
